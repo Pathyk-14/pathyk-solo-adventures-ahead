@@ -22,12 +22,12 @@ const Hero = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-emerald-50 to-green-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-slate-50 to-gray-100">
       {/* Navigation Header */}
       <nav className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-center">
           <img 
-            src="/lovable-uploads/f6962715-b5cb-4aa3-aa45-940f1a1efe41.png" 
+            src="/lovable-uploads/a3be16ce-2655-43f6-8913-d01e2f9dc81b.png" 
             alt="Pathyk Logo" 
             className="h-12 w-auto hover:scale-105 transition-transform duration-300"
           />
@@ -42,10 +42,10 @@ const Hero = () => {
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight font-playful">
                 Explore the 
-                <span className="text-teal-600 block animate-pulse">unexplored</span>
-                <span className="text-emerald-600 hover:scale-105 transition-transform duration-300 inline-block">solo</span>
+                <span className="text-black block animate-pulse">unexplored</span>
+                <span className="text-gray-700 hover:scale-105 transition-transform duration-300 inline-block">solo</span>
               </h1>
-              <div className="text-lg md:text-xl font-medium text-teal-700 mb-4 animate-bounce">
+              <div className="text-lg md:text-xl font-medium text-gray-800 mb-4 animate-bounce">
                 Explore Solo, Experience Together
               </div>
               <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
@@ -55,7 +55,7 @@ const Hero = () => {
             </div>
 
             {/* Signup Form */}
-            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-teal-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               {!isSubmitted ? (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="text-center mb-6">
@@ -73,7 +73,7 @@ const Hero = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
-                    className="h-12 text-lg border-gray-200 focus:border-teal-400 focus:ring-teal-400 transition-all duration-300 hover:border-teal-300"
+                    className="h-12 text-lg border-gray-200 focus:border-black focus:ring-black transition-all duration-300 hover:border-gray-400"
                   />
                   
                   <Input
@@ -82,20 +82,20 @@ const Hero = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="h-12 text-lg border-gray-200 focus:border-teal-400 focus:ring-teal-400 transition-all duration-300 hover:border-teal-300"
+                    className="h-12 text-lg border-gray-200 focus:border-black focus:ring-black transition-all duration-300 hover:border-gray-400"
                   />
                   
                   <Button 
                     type="submit" 
-                    className="w-full h-12 text-lg bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95"
+                    className="w-full h-12 text-lg bg-gradient-to-r from-gray-900 to-black hover:from-black hover:to-gray-800 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95"
                   >
                     Join the Waitlist & Get Travel Credit
                   </Button>
                 </form>
               ) : (
                 <div className="text-center py-8 animate-scale-in">
-                  <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
-                    <Mountain className="w-8 h-8 text-teal-600" />
+                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+                    <Mountain className="w-8 h-8 text-gray-800" />
                   </div>
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2 font-playful">
                     Welcome to the journey!
@@ -108,17 +108,17 @@ const Hero = () => {
             </div>
 
             {/* Referral Line */}
-            <div className="text-center p-4 bg-gradient-to-r from-teal-100 to-emerald-100 rounded-xl hover:from-teal-200 hover:to-emerald-200 transition-all duration-300 transform hover:scale-105">
+            <div className="text-center p-4 bg-gradient-to-r from-gray-100 to-slate-100 rounded-xl hover:from-gray-200 hover:to-slate-200 transition-all duration-300 transform hover:scale-105">
               <p className="text-gray-700">
                 <span className="font-semibold">Invite 3 friends</span> and unlock early access to 
-                <span className="font-semibold text-teal-700"> Pathyk Circles</span>
+                <span className="font-semibold text-black"> Pathyk Circles</span>
               </p>
             </div>
           </div>
 
           {/* Right Image */}
           <div className="relative animate-fade-in">
-            <div className="aspect-square bg-gradient-to-br from-teal-200 to-emerald-200 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105">
+            <div className="aspect-square bg-gradient-to-br from-gray-200 to-slate-200 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105">
               <img
                 src="https://images.unsplash.com/photo-1469474968028-56623f02e42e"
                 alt="Solo traveler on mountain trail"
@@ -127,9 +127,9 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
             {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-teal-400 rounded-full opacity-80 animate-pulse"></div>
-            <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-emerald-400 rounded-full opacity-60 animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 -left-8 w-12 h-12 bg-green-300 rounded-full opacity-40 animate-bounce delay-500"></div>
+            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gray-400 rounded-full opacity-80 animate-pulse"></div>
+            <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-slate-400 rounded-full opacity-60 animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 -left-8 w-12 h-12 bg-gray-300 rounded-full opacity-40 animate-bounce delay-500"></div>
           </div>
         </div>
       </div>
@@ -148,7 +148,7 @@ const Hero = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Feature 1 */}
           <div className="text-center group hover:scale-105 transition-transform duration-300">
-            <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300 group-hover:rotate-3">
+            <div className="w-16 h-16 bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300 group-hover:rotate-3">
               <Users className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-3 font-playful">
@@ -161,7 +161,7 @@ const Hero = () => {
 
           {/* Feature 2 */}
           <div className="text-center group hover:scale-105 transition-transform duration-300">
-            <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300 group-hover:rotate-3">
+            <div className="w-16 h-16 bg-gradient-to-br from-slate-600 to-slate-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300 group-hover:rotate-3">
               <Shield className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-3 font-playful">
@@ -174,7 +174,7 @@ const Hero = () => {
 
           {/* Feature 3 */}
           <div className="text-center group hover:scale-105 transition-transform duration-300">
-            <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300 group-hover:rotate-3">
+            <div className="w-16 h-16 bg-gradient-to-br from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300 group-hover:rotate-3">
               <Home className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-3 font-playful">
@@ -192,9 +192,9 @@ const Hero = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="mb-4">
             <img 
-              src="/lovable-uploads/f6962715-b5cb-4aa3-aa45-940f1a1efe41.png" 
+              src="/lovable-uploads/a3be16ce-2655-43f6-8913-d01e2f9dc81b.png" 
               alt="Pathyk Logo" 
-              className="h-8 w-auto mx-auto mb-4 opacity-80 hover:opacity-100 transition-opacity duration-300"
+              className="h-8 w-auto mx-auto mb-4 opacity-80 hover:opacity-100 transition-opacity duration-300 filter invert"
             />
             <p className="text-gray-400">
               Solo travel, safely explored
