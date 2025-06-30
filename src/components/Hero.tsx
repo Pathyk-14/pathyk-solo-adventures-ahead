@@ -34,6 +34,9 @@ const Hero = () => {
                 <span className="text-orange-600 block">unexplored</span>
                 <span className="text-amber-600">solo</span>
               </h1>
+              <div className="text-lg md:text-xl font-medium text-orange-700 mb-4">
+                Explore Solo, Experience Together
+              </div>
               <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
                 Discover offbeat destinations safely with verified local guides, 
                 trusted travel buddies, and solo-friendly stays across India
