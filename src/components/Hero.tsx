@@ -63,7 +63,7 @@ const Hero = () => {
                       Join the Adventure
                     </h3>
                     <p className="text-gray-600">
-                      Get early access + ₹500 travel credit
+                      Get early access + Pathyk Travel Credit
                     </p>
                   </div>
                   
