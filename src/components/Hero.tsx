@@ -1,8 +1,8 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Mountain, Users, Shield, Home } from 'lucide-react';
+import DoodleArrow from './DoodleArrow';
 
 const Hero = () => {
   const [email, setEmail] = useState('');
@@ -55,7 +55,8 @@ const Hero = () => {
             </div>
 
             {/* Signup Form */}
-            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-pink-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-pink-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+              <DoodleArrow />
               {!isSubmitted ? (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="text-center mb-6">
