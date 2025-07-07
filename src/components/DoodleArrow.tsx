@@ -8,7 +8,7 @@ const DoodleArrow = () => {
         viewBox="0 0 100 80"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="text-orange-600"
+        className="text-teal-600"
       >
         {/* Hand-drawn style curved arrow */}
         <path
@@ -33,7 +33,7 @@ const DoodleArrow = () => {
         <circle cx="20" cy="45" r="2" fill="currentColor" className="animate-pulse" />
         <circle cx="70" cy="15" r="1.5" fill="currentColor" className="animate-pulse delay-500" />
       </svg>
-      <div className="absolute -bottom-8 right-2 text-orange-600 font-playful text-base font-bold animate-pulse transform -rotate-12">
+      <div className="absolute -bottom-8 right-2 text-teal-600 font-playful text-base font-bold animate-pulse transform -rotate-12">
         Join here!
       </div>
     </div>

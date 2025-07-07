@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Compass, Home, Users, TreeDeciduous } from 'lucide-react';
+import { Compass, Map, MapPin, Plane, Backpack, Camera, Globe } from 'lucide-react';
 import DoodleArrow from './DoodleArrow';
 
 const Hero = () => {
@@ -23,7 +23,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       {/* Navigation Header */}
       <nav className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-start">
@@ -35,20 +35,39 @@ const Hero = () => {
         </div>
       </nav>
 
+      {/* Floating Travel Elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-20 left-10 text-teal-400 opacity-20 animate-bounce">
+          <Plane size={32} />
+        </div>
+        <div className="absolute top-40 right-20 text-emerald-400 opacity-20 animate-pulse">
+          <Map size={28} />
+        </div>
+        <div className="absolute bottom-60 left-20 text-cyan-400 opacity-20 animate-bounce delay-1000">
+          <Backpack size={24} />
+        </div>
+        <div className="absolute bottom-40 right-10 text-teal-400 opacity-20 animate-pulse delay-500">
+          <Camera size={26} />
+        </div>
+        <div className="absolute top-60 left-1/2 text-emerald-400 opacity-20 animate-bounce delay-700">
+          <Globe size={30} />
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="text-center space-y-8 animate-fade-in">
           {/* Main Headline */}
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl font-bold text-amber-900 leading-tight font-playful">
+            <h1 className="text-4xl md:text-6xl font-bold text-teal-900 leading-tight font-playful">
               Explore Solo.
               <br />
-              <span className="text-orange-700 animate-pulse">Experience Together.</span>
+              <span className="text-emerald-700 animate-pulse">Experience Together.</span>
             </h1>
           </div>
 
           {/* Signup Form */}
-          <div className="max-w-md mx-auto bg-white rounded-3xl p-8 shadow-2xl border-2 border-orange-200 hover:shadow-3xl transition-all duration-300 transform hover:scale-105 relative">
+          <div className="max-w-md mx-auto bg-white rounded-3xl p-8 shadow-2xl border-2 border-teal-200 hover:shadow-3xl transition-all duration-300 transform hover:scale-105 relative">
             <DoodleArrow />
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -58,7 +77,7 @@ const Hero = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
-                  className="h-14 text-lg border-2 border-orange-200 focus:border-orange-500 focus:ring-orange-500 transition-all duration-300 hover:border-orange-300 rounded-xl"
+                  className="h-14 text-lg border-2 border-teal-200 focus:border-teal-500 focus:ring-teal-500 transition-all duration-300 hover:border-teal-300 rounded-xl"
                 />
                 
                 <Input
@@ -67,20 +86,20 @@ const Hero = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="h-14 text-lg border-2 border-orange-200 focus:border-orange-500 focus:ring-orange-500 transition-all duration-300 hover:border-orange-300 rounded-xl"
+                  className="h-14 text-lg border-2 border-teal-200 focus:border-teal-500 focus:ring-teal-500 transition-all duration-300 hover:border-teal-300 rounded-xl"
                 />
                 
                 <Button 
                   type="submit" 
-                  className="w-full h-14 text-lg bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95 font-playful"
+                  className="w-full h-14 text-lg bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95 font-playful"
                 >
                   Join the Adventure
                 </Button>
               </form>
             ) : (
               <div className="text-center py-8 animate-scale-in">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
-                  <Compass className="w-8 h-8 text-orange-700" />
+                <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+                  <Compass className="w-8 h-8 text-teal-700" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-2 font-playful">
                   Welcome to the journey!
@@ -94,7 +113,7 @@ const Hero = () => {
 
           {/* Call to Action Text */}
           <div className="text-center">
-            <p className="text-xl text-amber-800 font-medium font-playful">
+            <p className="text-xl text-teal-800 font-medium font-playful">
               Join now for early access + exclusive travel credits 💸🌍
             </p>
           </div>
@@ -102,34 +121,34 @@ const Hero = () => {
       </div>
 
       {/* Features Section */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {/* Feature 1 */}
           <div className="text-center group hover:scale-110 transition-transform duration-300">
-            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-all duration-300 group-hover:rotate-6">
+            <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-all duration-300 group-hover:rotate-6">
               <span className="text-2xl">🧭</span>
             </div>
-            <h3 className="text-sm font-semibold text-amber-900 font-playful leading-tight">
+            <h3 className="text-sm font-semibold text-teal-900 font-playful leading-tight">
               Curated Offbeat Circuits
             </h3>
           </div>
 
           {/* Feature 2 */}
           <div className="text-center group hover:scale-110 transition-transform duration-300">
-            <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-all duration-300 group-hover:rotate-6">
+            <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-all duration-300 group-hover:rotate-6">
               <span className="text-2xl">🏡</span>
             </div>
-            <h3 className="text-sm font-semibold text-amber-900 font-playful leading-tight">
+            <h3 className="text-sm font-semibold text-teal-900 font-playful leading-tight">
               Verified Local Rentals & Hostels
             </h3>
           </div>
 
           {/* Feature 3 */}
           <div className="text-center group hover:scale-110 transition-transform duration-300">
-            <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-all duration-300 group-hover:rotate-6">
+            <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-all duration-300 group-hover:rotate-6">
               <span className="text-2xl">👯‍♂️</span>
             </div>
-            <h3 className="text-sm font-semibold text-amber-900 font-playful leading-tight">
+            <h3 className="text-sm font-semibold text-teal-900 font-playful leading-tight">
               Travel Buddy Finder<br />(Pathyk Circles)
             </h3>
           </div>
@@ -139,7 +158,7 @@ const Hero = () => {
             <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-all duration-300 group-hover:rotate-6">
               <span className="text-2xl">🌱</span>
             </div>
-            <h3 className="text-sm font-semibold text-amber-900 font-playful leading-tight">
+            <h3 className="text-sm font-semibold text-teal-900 font-playful leading-tight">
               Tree Planting Rewards<br />(EarthLine)
             </h3>
           </div>
@@ -147,33 +166,33 @@ const Hero = () => {
       </div>
 
       {/* Testimonial Section */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-orange-100 to-amber-100 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-orange-200">
+          <div className="bg-gradient-to-r from-teal-100 to-emerald-100 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-teal-200">
             {/* Solo traveler illustration placeholder */}
-            <div className="w-20 h-20 bg-gradient-to-br from-orange-300 to-amber-300 rounded-full mx-auto mb-6 flex items-center justify-center">
+            <div className="w-20 h-20 bg-gradient-to-br from-teal-300 to-emerald-300 rounded-full mx-auto mb-6 flex items-center justify-center">
               <span className="text-3xl animate-bounce">🎒</span>
             </div>
-            <blockquote className="text-xl text-amber-900 font-medium mb-4 font-playful italic">
+            <blockquote className="text-xl text-teal-900 font-medium mb-4 font-playful italic">
               "This is exactly what solo travel in India needed. Can't wait. ✨"
             </blockquote>
-            <p className="text-amber-700 font-semibold">- Solo Explorer</p>
+            <p className="text-teal-700 font-semibold">- Solo Explorer</p>
           </div>
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-amber-800 to-orange-800 text-white py-12 relative">
+      <footer className="bg-gradient-to-r from-teal-800 to-emerald-800 text-white py-12 relative">
         <div className="container mx-auto px-4 text-center">
           <div className="mb-6">
-            <p className="text-2xl font-bold text-amber-100 font-playful mb-2">
+            <p className="text-2xl font-bold text-teal-100 font-playful mb-2">
               Launching October 2025
             </p>
-            <p className="text-amber-200">
+            <p className="text-teal-200">
               A passport to mindful solo travel
             </p>
           </div>
-          <p className="text-amber-300 text-sm">
+          <p className="text-teal-300 text-sm">
             © 2024 Pathyk. Made with ❤️ for solo adventurers in India.
           </p>
         </div>
