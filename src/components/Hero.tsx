@@ -28,7 +28,7 @@ const Hero = () => {
       <nav className="container mx-auto px-4 py-6">
         <div className="flex items-center justify-start">
           <img 
-            src="/lovable-uploads/6317785f-fd78-4120-8275-d86c2475ec61.png" 
+            src="/lovable-uploads/ec6dd74c-56f3-40c4-9a8a-e6692e39e609.png" 
             alt="Pathyk Logo" 
             className="h-12 w-auto hover:scale-105 transition-transform duration-300"
           />
@@ -197,10 +197,10 @@ const Hero = () => {
           </p>
         </div>
         
-        {/* Logo in bottom right */}
-        <div className="absolute bottom-4 right-4">
+        {/* Logo in bottom left */}
+        <div className="absolute bottom-4 left-4">
           <img 
-            src="/lovable-uploads/6317785f-fd78-4120-8275-d86c2475ec61.png" 
+            src="/lovable-uploads/ec6dd74c-56f3-40c4-9a8a-e6692e39e609.png" 
             alt="Pathyk Logo" 
             className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
           />
